@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1C1C1C"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="368dp"
+            android:backgroundTint="#ffffff"
+            android:ems="10"
+            android:fontFamily="@font/delius"
+            android:gravity="left"
+            android:hint="your password"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:textColorHint="#cacaca"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/id"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="308dp"
+            android:backgroundTint="#ffffff"
+            android:fontFamily="@font/delius"
+            android:gravity="left"
+            android:hint="your id"
+            android:textColor="#ffffff"
+            android:textColorHint="#cacaca"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/url"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="248dp"
+            android:backgroundTint="#ffffff"
+            android:fontFamily="@font/delius"
+            android:hint="www.example.com"
+            android:textColor="#ffffff"
+            android:textColorHint="#cacaca"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tag"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="180dp"
+            android:backgroundTint="#ffffff"
+            android:fontFamily="@font/delius"
+            android:hint="google"
+            android:textColor="#ffffff"
+            android:textColorHint="#666666"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="238dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="180dp"
+            android:backgroundTint="#ffffff"
+            android:ems="10"
+            android:fontFamily="@font/delius"
+            android:hint="example@gmail.com"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff"
+            android:textColorHint="#666666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="296dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/delius"
+            android:text="Save Account"
+            android:textColor="#ffffff"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="347dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="444dp"
+            android:backgroundTint="#ffffff"
+            android:ems="10"
+            android:fontFamily="@font/delius"
+            android:inputType="textPersonName"
+            android:text="memo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="292dp"
+            android:layout_marginTop="576dp"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="576dp"
+            android:text="ToggleButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="29dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="188dp"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="368dp"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:fontFamily="@font/delius"
+        android:gravity="left"
+        android:hint="your password"
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#cacaca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/id2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="308dp"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/delius"
+        android:gravity="left"
+        android:hint="your id"
+        android:textColor="#ffffff"
+        android:textColorHint="#cacaca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/url2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="248dp"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/delius"
+        android:hint="www.example.com"
+        android:textColor="#ffffff"
+        android:textColorHint="#cacaca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tag2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/delius"
+        android:hint="google"
+        android:textColor="#ffffff"
+        android:textColorHint="#666666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email2"
+        android:layout_width="238dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:fontFamily="@font/delius"
+        android:hint="example@gmail.com"
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#666666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/account2"
+        android:layout_width="296dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/delius"
+        android:text="Save Account"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="347dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="444dp"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:fontFamily="@font/delius"
+        android:inputType="textPersonName"
+        android:text="memo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="576dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="576dp"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="29dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="188dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
