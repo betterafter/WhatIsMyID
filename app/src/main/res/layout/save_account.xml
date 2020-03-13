@@ -12,7 +12,7 @@
         android:background="#1C1C1C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:context=".Save_widAccountActivity">
+        tools:context=".Activity.Save_widAccountActivity">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/id"

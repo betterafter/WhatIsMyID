@@ -1,9 +1,12 @@
-package com.example.whatismyid;
+package com.example.whatismyid.Activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.example.whatismyid.R;
+import com.example.whatismyid.listAdapter.ShowAccountAdapater;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +15,7 @@ import listDataForm.item_normal;
 
 public class Show_widAccountActivity extends Save_widAccountActivity {
 
-    private Adapter adapter;
+    private ShowAccountAdapater adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +33,7 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        adapter = new Adapter();
+        adapter = new ShowAccountAdapater();
         recyclerView.setAdapter(adapter);
     }
 

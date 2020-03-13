@@ -1,40 +1,19 @@
-package com.example.whatismyid;
+package com.example.whatismyid.listAdapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.whatismyid.R;
 
 import java.util.ArrayList;
 
 import listDataForm.item_normal;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private ArrayList<item_normal> item_normals = new ArrayList<>();
-
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position){
-
-        holder.Bind(item_normals.get(position));
-    }
-
-
-    @Override
-    public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context context = parent.getContext() ;
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
-
-        View view = inflater.inflate(R.layout.list_normalitem, parent, false) ;
-        Adapter.ViewHolder vh = new Adapter.ViewHolder(view) ;
-
-
-        return vh ;
-    }
-
+    protected ArrayList<item_normal> item_normals = new ArrayList<>();
 
     @Override
     public int getItemCount(){
@@ -45,9 +24,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     class ViewHolder extends RecyclerView.ViewHolder{
 
+        // ShowAccountAdapter
         private TextView Titleview;
         private TextView idCountview;
         private ImageView Logoview;
+        private TextView urlview1;
+
+        // SHowNameSavedAccountAdapter
+        private TextView Titleview1;
+        private TextView IDview;
+        private TextView passwordview;
+        private TextView Emailview;
+        private TextView memoview;
+        private TextView urlview2;
+
+        // NameSuggestAdapter
+        private TextView Titleview2;
+        private ImageView Logoview2;
+
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -55,6 +49,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Titleview = itemView.findViewById(R.id.titleview);
             idCountview = itemView.findViewById(R.id.idnumberview);
             Logoview = itemView.findViewById(R.id.logoview);
+
+
+
         }
 
         void Bind(item_normal item_normal){
@@ -62,7 +59,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             idCountview.setText("저장한 ID : " + item_normal.getIDNumber());
             Logoview.setImageResource(item_normal.getLogo());
         }
-
     }
 
 

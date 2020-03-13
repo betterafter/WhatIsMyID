@@ -1,4 +1,4 @@
-package com.example.whatismyid;
+package com.example.whatismyid.Activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatEditText;
 import android.view.MotionEvent;
 import android.view.inputmethod.InputMethodManager;
+
+import com.example.whatismyid.R;
+import com.example.whatismyid.wid_Database;
 
 public abstract class Save_widAccountActivity extends wid_Database {
 
