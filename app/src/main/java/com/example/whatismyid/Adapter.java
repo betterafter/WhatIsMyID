@@ -10,13 +10,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import listDataForm.item_name;
 import listDataForm.item_normal;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private ArrayList<item_normal> item_normals = new ArrayList<>();
-    private ArrayList<item_name> item_names = new ArrayList<>();
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
@@ -30,7 +28,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
-        View view = inflater.inflate(R.layout.show_account, parent, false) ;
+        View view = inflater.inflate(R.layout.list_normalitem, parent, false) ;
         Adapter.ViewHolder vh = new Adapter.ViewHolder(view) ;
 
 
@@ -59,33 +57,17 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Logoview = itemView.findViewById(R.id.logoview);
         }
 
-        void Bind(item_normal item_all){
-            Titleview.setText(item_all.getSiteName());
-            idCountview.setText("저장한 ID : " + item_all.getIDNumber());
-            Logoview.setImageResource(item_all.getLogo());
-        }
-
-    }
-
-
-    class name_ViewHolder extends RecyclerView.ViewHolder{
-
-        private TextView Titleview;
-
-        name_ViewHolder(View itemView){
-            super(itemView);
-
-            Titleview = itemView.findViewById(R.id.list_name);
-        }
-
         void Bind(item_normal item_normal){
             Titleview.setText(item_normal.getSiteName());
+            idCountview.setText("저장한 ID : " + item_normal.getIDNumber());
+            Logoview.setImageResource(item_normal.getLogo());
         }
 
     }
 
 
-    public void AddItem(item_normal item_all){
-        item_normals.add(item_all);
+
+    public void AddItem(item_normal item){
+        item_normals.add(item);
     }
 }

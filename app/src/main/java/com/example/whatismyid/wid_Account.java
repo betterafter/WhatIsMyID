@@ -6,5 +6,7 @@ public interface wid_Account {
     void SaveToDatabase(String[] strings);
 
     // database에 사이트 이름들을 가져오기
-    void LoadSiteNameToDatabase();
+    void LoadFromDatabase();
+
+    void ShowListData();
 }
