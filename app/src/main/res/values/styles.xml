@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#1C1C1C</item>
-        <item name="colorPrimaryDark">#1C1C1C</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item_all name="colorPrimary">#1C1C1C</item_all>
+        <item_all name="colorPrimaryDark">#1C1C1C</item_all>
+        <item_all name="colorAccent">@color/colorAccent</item_all>
     </style>
 
     <style name="EdittextThema" parent="Widget.AppCompat.EditText">

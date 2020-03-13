@@ -8,7 +8,7 @@ import android.support.v7.widget.AppCompatEditText;
 import android.view.MotionEvent;
 import android.view.inputmethod.InputMethodManager;
 
-public abstract class SaveAccount extends AppCompatActivity implements AccountData {
+public class Save_widAccountActivity extends AppCompatActivity implements wid_Account {
 
     // 각 EditText에 자신의 계정 정보를 입력
     // save 버튼을 누르면 EditText에 적은 text를 가져와 sql 저장
@@ -69,4 +69,17 @@ public abstract class SaveAccount extends AppCompatActivity implements AccountDa
 
         return account;
     }
+
+
+
+    public void SaveToDatabase(String[] strings){
+
+    }
+
+
+
+    public void LoadSiteNameToDatabase(){
+
+    }
+
 }

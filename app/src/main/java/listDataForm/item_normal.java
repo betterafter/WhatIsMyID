@@ -1,6 +1,6 @@
-package com.example.whatismyid;
+package listDataForm;
 
-public class item {
+public class item_normal {
 
     private String siteName;
     private String IDNumber;

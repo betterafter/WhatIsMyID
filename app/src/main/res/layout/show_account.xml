@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1C1C1C"
-    tools:context=".MainActivity">
+    tools:context=".Show_widAccountActivity">
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycle"
+        android:id="@+id/show_account"
         android:layout_width="395dp"
         android:layout_height="612dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -10,15 +10,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import listDataForm.item_name;
+import listDataForm.item_normal;
+
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private ArrayList<item> items = new ArrayList<>();
+    private ArrayList<item_normal> item_normals = new ArrayList<>();
     private ArrayList<item_name> item_names = new ArrayList<>();
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
 
-        holder.Bind(items.get(position));
+        holder.Bind(item_normals.get(position));
     }
 
 
@@ -27,7 +30,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
-        View view = inflater.inflate(R.layout.site_list, parent, false) ;
+        View view = inflater.inflate(R.layout.show_account, parent, false) ;
         Adapter.ViewHolder vh = new Adapter.ViewHolder(view) ;
 
 
@@ -38,7 +41,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public int getItemCount(){
 
-        return items.size();
+        return item_normals.size();
     }
 
 
@@ -56,10 +59,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Logoview = itemView.findViewById(R.id.logoview);
         }
 
-        void Bind(item item){
-            Titleview.setText(item.getSiteName());
-            idCountview.setText("저장한 ID : " + item.getIDNumber());
-            Logoview.setImageResource(item.getLogo());
+        void Bind(item_normal item_all){
+            Titleview.setText(item_all.getSiteName());
+            idCountview.setText("저장한 ID : " + item_all.getIDNumber());
+            Logoview.setImageResource(item_all.getLogo());
         }
 
     }
@@ -75,9 +78,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Titleview = itemView.findViewById(R.id.list_name);
         }
 
-        void Bind(item item){
-            Titleview.setText(item.getSiteName());
+        void Bind(item_normal item_normal){
+            Titleview.setText(item_normal.getSiteName());
         }
 
+    }
+
+
+    public void AddItem(item_normal item_all){
+        item_normals.add(item_all);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.whatismyid;
 
-public interface AccountData {
+public interface wid_Account {
 
     // GetAccountInformation의 String 배열을 받아서 database에 저장
     void SaveToDatabase(String[] strings);

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/amiko</item>
-        <item>@font/copse</item>
-        <item>@font/delius</item>
-        <item>@font/exo_light</item>
+        <item_all>@font/amiko</item_all>
+        <item_all>@font/copse</item_all>
+        <item_all>@font/delius</item_all>
+        <item_all>@font/exo_light</item_all>
     </array>
 </resources>
