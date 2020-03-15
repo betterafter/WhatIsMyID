@@ -6,6 +6,7 @@
         <item name="colorPrimary">#1C1C1C</item>
         <item name="colorPrimaryDark">#1C1C1C</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#ffffff</item>
     </style>
 
     <style name="EdittextThema" parent="Widget.AppCompat.EditText">

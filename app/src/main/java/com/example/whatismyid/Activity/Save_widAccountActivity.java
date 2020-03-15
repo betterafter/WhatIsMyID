@@ -1,16 +1,21 @@
 package com.example.whatismyid.Activity;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatEditText;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 
 import com.example.whatismyid.R;
 import com.example.whatismyid.wid_Database;
 
-public abstract class Save_widAccountActivity extends wid_Database {
+public class Save_widAccountActivity extends wid_Database {
+
+    Button.OnClickListener onClickListener;
 
     // 각 EditText에 자신의 계정 정보를 입력
     // save 버튼을 누르면 EditText에 적은 text를 가져와 sql 저장
@@ -27,6 +32,7 @@ public abstract class Save_widAccountActivity extends wid_Database {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.save_account);
 
+        ChangeClickedEditTextStyle();
         init();
     }
 
@@ -41,6 +47,16 @@ public abstract class Save_widAccountActivity extends wid_Database {
         PasswordText = findViewById(R.id.password);
         EmailText = findViewById(R.id.email);
         MemoText = findViewById(R.id.text);
+
+        SiteNameText.requestFocus();
+
+//        SiteNameText.setOnClickListener(onClickListener);
+//        SiteURLText.setOnClickListener(onClickListener);
+//        LogInText.setOnClickListener(onClickListener);
+//        PasswordText.setOnClickListener(onClickListener);
+//        EmailText.setOnClickListener(onClickListener);
+//        MemoText.setOnClickListener(onClickListener);
+
     }
 
 
@@ -54,6 +70,34 @@ public abstract class Save_widAccountActivity extends wid_Database {
 
         return true;
     }
+
+    public void onClick(View view){
+        System.out.println("!!!");
+        view.setBackgroundColor(Color.rgb(255, 255, 255));
+
+    }
+
+
+
+    private void ChangeClickedEditTextStyle(){
+
+        onClickListener = new Button.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(view instanceof AppCompatEditText){
+
+
+                    if(view.isFocused()){
+
+                    }
+                }
+            }
+
+        };
+    }
+
+
+
 
 
 
@@ -81,6 +125,11 @@ public abstract class Save_widAccountActivity extends wid_Database {
 
 
     public void LoadFromDatabase(){
+
+    }
+
+
+    public void ShowListData(){
 
     }
 

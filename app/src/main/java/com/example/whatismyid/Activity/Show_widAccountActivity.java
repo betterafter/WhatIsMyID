@@ -1,9 +1,11 @@
 package com.example.whatismyid.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.whatismyid.R;
 import com.example.whatismyid.listAdapter.ShowAccountAdapater;
@@ -61,6 +63,12 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
             adapter.AddItem(item_normals);
         }
         adapter.notifyDataSetChanged();
+    }
+
+
+    public void onSaveAccountClick(View view){
+        Intent intent = new Intent(Show_widAccountActivity.this, Save_widAccountActivity.class);
+        startActivity(intent);
     }
 
 }
