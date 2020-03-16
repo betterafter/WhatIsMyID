@@ -9,4 +9,6 @@ public interface wid_Account {
     void LoadFromDatabase();
 
     void ShowListData();
+
+    void ShowListNameData();
 }

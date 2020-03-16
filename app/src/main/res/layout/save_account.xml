@@ -96,16 +96,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="40dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="344dp"
-            android:layout_marginTop="56dp"
-            android:text="Button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -183,13 +173,23 @@
             android:layout_height="100dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="504dp"
-            android:backgroundTint="#ffffff"
             android:fontFamily="@font/exo_light"
             android:hint="memo"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/namesearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClickForPopUpActivate"
+            app:layout_constraintStart_toEndOf="@+id/tag"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_search" />
 
     </android.support.constraint.ConstraintLayout>
 

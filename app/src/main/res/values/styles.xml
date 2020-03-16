@@ -9,9 +9,7 @@
         <item name="colorControlNormal">#ffffff</item>
     </style>
 
-    <style name="EdittextThema" parent="Widget.AppCompat.EditText">
-
-
-    </style>
+    <style name="EdittextThema" parent="Widget.AppCompat.EditText"></style>
+    <style name="PopupTheme" parent="Theme.AppCompat.DayNight.Dialog"></style>
 
 </resources>

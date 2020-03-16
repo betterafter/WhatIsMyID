@@ -24,12 +24,12 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_account);
 
-        init();
+        recyclerviewInit();
         ShowListData();
     }
 
     // recyclerview 초기화
-    private void init(){
+    private void recyclerviewInit(){
 
         RecyclerView recyclerView = findViewById(R.id.show_account);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -44,6 +44,7 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
 
     // 데이터베이스에서 사이트 이름, 사이트 별로 저장된 아이디 개수, 해당 사이트에 등록되어 있는 로고를 가져와서
     // List에 넣어서 item_normal 데이터 형식 클래스에 넣어서 adapter에 연결해주면 됨.
+    @Override
     public void ShowListData(){
 
         // e.g.
@@ -70,5 +71,4 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
         Intent intent = new Intent(Show_widAccountActivity.this, Save_widAccountActivity.class);
         startActivity(intent);
     }
-
 }

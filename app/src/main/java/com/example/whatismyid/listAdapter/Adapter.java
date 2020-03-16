@@ -46,10 +46,14 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         ViewHolder(View itemView) {
             super(itemView);
 
+            // ShowAccountAdapter
             Titleview = itemView.findViewById(R.id.titleview);
             idCountview = itemView.findViewById(R.id.idnumberview);
             Logoview = itemView.findViewById(R.id.logoview);
 
+
+            // NameSuggestAdapter
+            Titleview2 = itemView.findViewById(R.id.namesuggestview);
 
 
         }
@@ -58,6 +62,12 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Titleview.setText(item_normal.getSiteName());
             idCountview.setText("저장한 ID : " + item_normal.getIDNumber());
             Logoview.setImageResource(item_normal.getLogo());
+        }
+
+
+        void NameSuggestBind(item_normal item_normal){
+
+            Titleview2.setText(item_normal.getSiteName());
         }
     }
 

@@ -16,11 +16,11 @@ public class ShowNameSavedAccountAdapter extends Adapter {
     }
 
     @Override
-    public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ShowNameSavedAccountAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
-        View view = inflater.inflate(R.layout.list_normalitem, parent, false) ;
+        View view = inflater.inflate(R.layout.list_nameitem, parent, false) ;
         Adapter.ViewHolder vh = new Adapter.ViewHolder(view) ;
 
 

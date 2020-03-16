@@ -12,7 +12,7 @@ public class NameSuggestAdapter extends Adapter {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
 
-        holder.Bind(item_normals.get(position));
+        holder.NameSuggestBind(item_normals.get(position));
     }
 
     @Override
@@ -20,7 +20,7 @@ public class NameSuggestAdapter extends Adapter {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
-        View view = inflater.inflate(R.layout.list_normalitem, parent, false) ;
+        View view = inflater.inflate(R.layout.list_nameitem, parent, false) ;
         Adapter.ViewHolder vh = new Adapter.ViewHolder(view) ;
 
 

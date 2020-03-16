@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.Save_widAccountActivity"/>
+        <activity android:name=".Activity.NameSuggestPopupActivity"
+            android:theme="@style/PopupTheme" android:screenOrientation="portrait"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
