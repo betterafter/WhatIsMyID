@@ -26,6 +26,7 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
 
         recyclerviewInit();
         ShowListData();
+        CurrentActionBar();
     }
 
     // recyclerview 초기화
@@ -38,6 +39,12 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
         adapter = new ShowAccountAdapater();
         recyclerView.setAdapter(adapter);
     }
+
+    private void CurrentActionBar(){
+        widActionbar bar = new widActionbar(this, getSupportActionBar());
+        bar.ShowAccount_ActionbarStyle();
+    }
+
 
 
 

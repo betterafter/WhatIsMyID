@@ -9,8 +9,10 @@ import com.example.whatismyid.R;
 
 public class NameSuggestAdapter extends Adapter {
 
+    public String SuggestName;
+
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position){
+    public void onBindViewHolder(ViewHolder holder, final int position){
 
         holder.NameSuggestBind(item_normals.get(position));
     }

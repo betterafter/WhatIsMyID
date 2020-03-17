@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.whatismyid.R;
 import com.example.whatismyid.listAdapter.NameSuggestAdapter;
@@ -18,7 +19,9 @@ import listDataForm.item_normal;
 
 public class NameSuggestPopupActivity extends Save_widAccountActivity {
 
+    private RecyclerView recyclerView;
     private NameSuggestAdapter nameSuggestAdapter;
+    private String siteName;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class NameSuggestPopupActivity extends Save_widAccountActivity {
 
     // 이름 추천 리스트 설정
     public void recyclerviewInit(){
-        RecyclerView recyclerView = findViewById(R.id.suggestview);
+        recyclerView = findViewById(R.id.suggestview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -80,7 +83,24 @@ public class NameSuggestPopupActivity extends Save_widAccountActivity {
             nameSuggestAdapter.AddItem(item_normals);
         }
         nameSuggestAdapter.notifyDataSetChanged();
-
     }
+
+
+
+
+
+    public void onListItemClick(View view){
+
+        siteName = ((TextView)view).getText().toString();
+
+        Intent intent = new Intent(this, Save_widAccountActivity.class);
+        intent.putExtra("sitename", siteName);
+        setResult(0, intent);
+        finish();
+    }
+
+
+
+
 
 }

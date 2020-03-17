@@ -25,22 +25,22 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder{
 
         // ShowAccountAdapter
-        private TextView Titleview;
-        private TextView idCountview;
-        private ImageView Logoview;
-        private TextView urlview1;
+        public TextView Titleview;
+        public TextView idCountview;
+        public ImageView Logoview;
+        public TextView urlview1;
 
         // SHowNameSavedAccountAdapter
-        private TextView Titleview1;
-        private TextView IDview;
-        private TextView passwordview;
-        private TextView Emailview;
-        private TextView memoview;
-        private TextView urlview2;
+        public TextView Titleview1;
+        public TextView IDview;
+        public TextView passwordview;
+        public TextView Emailview;
+        public TextView memoview;
+        public TextView urlview2;
 
         // NameSuggestAdapter
-        private TextView Titleview2;
-        private ImageView Logoview2;
+        public TextView Titleview2;
+        public ImageView Logoview2;
 
 
         ViewHolder(View itemView) {

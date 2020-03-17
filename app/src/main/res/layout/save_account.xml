@@ -19,7 +19,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/edittext_style"
             android:fontFamily="@font/exo_light"
             android:gravity="center"
@@ -30,7 +30,7 @@
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/url" />
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/password"
@@ -53,8 +53,7 @@
         <android.support.design.widget.TextInputEditText
             android:id="@+id/url"
             android:layout_width="350dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="172dp"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/exo_light"
             android:hint="www.example.com"
             android:nextFocusDown="@+id/id"
@@ -62,14 +61,15 @@
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/tag"
             android:layout_width="310dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/exo_light"
             android:hint="google"
             android:nextFocusDown="@id/url"
@@ -79,13 +79,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.277"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/email"
             android:layout_width="350dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="408dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/exo_light"
             android:hint="www.example@gmail.com"
             android:nextFocusDown="@+id/text"
@@ -94,14 +94,14 @@
             android:textColorHint="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="사이트 이름"
             android:textColor="#5384FF"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="324dp"
             android:text="이메일"
             android:textColor="#5384FF"
             app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="144dp"
+            android:layout_marginTop="112dp"
             android:text="사이트 주소"
             android:textAlignment="center"
             android:textColor="#5384FF"
@@ -172,13 +172,13 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="504dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/exo_light"
             android:hint="memo"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/email" />
 
         <ImageButton
             android:id="@+id/namesearch"

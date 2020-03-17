@@ -20,7 +20,8 @@ public class Save_widAccountActivity extends wid_Database {
     // 메모에는 해당 계정에 대한 추가 정보를 마음대로 작성하는 칸.
 
     // 순서대로 사이트 이름 - 사이트 주소 - 아이디 - 비밀번호 - 이메일 - 추가 메모
-    AppCompatEditText SiteNameText, SiteURLText, LogInText, PasswordText, EmailText, MemoText;
+    public AppCompatEditText SiteNameText, SiteURLText, LogInText, PasswordText, EmailText, MemoText;
+
 
 
 
@@ -29,8 +30,14 @@ public class Save_widAccountActivity extends wid_Database {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.save_account);
-
         init();
+        CurrentActionBar();
+    }
+
+
+    private void CurrentActionBar(){
+        widActionbar bar = new widActionbar(this, getSupportActionBar());
+        bar.SaveAccount_ActionbarStyle();
     }
 
 
@@ -77,7 +84,6 @@ public class Save_widAccountActivity extends wid_Database {
         return account;
     }
 
-
     // 사이트 이름 옆에 돋보기 버튼 누르면 이름 추천 팝업창 띄우기
     public void onClickForPopUpActivate(View view){
 
@@ -106,5 +112,16 @@ public class Save_widAccountActivity extends wid_Database {
     public void ShowListNameData(){
 
     }
+
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == 0){
+            SiteNameText.setText(data.getExtras().getString("sitename"));
+        }
+    }
+
+
+
 
 }
