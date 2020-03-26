@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-public abstract class wid_Database extends AppCompatActivity implements wid_Account {
+public abstract class wid_MainActivity extends AppCompatActivity implements wid_Account {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

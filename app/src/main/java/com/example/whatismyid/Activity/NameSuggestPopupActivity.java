@@ -3,6 +3,7 @@ package com.example.whatismyid.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
@@ -17,7 +18,7 @@ import java.util.List;
 
 import listDataForm.item_normal;
 
-public class NameSuggestPopupActivity extends Save_widAccountActivity {
+public class NameSuggestPopupActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private NameSuggestAdapter nameSuggestAdapter;
@@ -66,7 +67,7 @@ public class NameSuggestPopupActivity extends Save_widAccountActivity {
 
     // 이름 설정 리스트에 들어갈 데이터들. Show_widAccountActivity 에서 오버라이딩한 것 처럼 만들면 된다.
     // 대상 adapter는 현재 클래스에 있는 recyclerVeiw 의 adapter인 showNameSavedAccountAdapter
-    @Override
+
     public void ShowListNameData(){
         // e.g.
         // 데이터를 저장할 리스트들 (사이트 이름, 사이트 별로 저장된 아이디 개수 저장)
@@ -77,7 +78,7 @@ public class NameSuggestPopupActivity extends Save_widAccountActivity {
         // 여러개의 item_normal을 리스트로 출력해서 보여주는 것이라고 생각하면 됨.
         for(int i = 0; i < SampleTitle.size(); i++){
 
-            item_normal item_normals = new item_normal();
+            item_normal item_normals = new item_normal(3);
             item_normals.setSiteName(SampleTitle.get(i));
 
             nameSuggestAdapter.AddItem(item_normals);

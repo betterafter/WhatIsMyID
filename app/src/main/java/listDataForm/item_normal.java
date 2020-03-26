@@ -3,16 +3,26 @@ package listDataForm;
 public class item_normal {
 
     private String siteName;
+    private String url;
     private String IDNumber;
     private int Logo;
     private String Email;
     private String ID;
     private String password;
     private String memo;
+    private int type;
+
+
+    public item_normal(int viewType){
+        this.type = viewType;
+    }
+
 
     public String getSiteName(){
         return siteName;
     }
+
+    public String getUrl(){ return url; }
 
     public String getIDNumber(){
         return IDNumber;
@@ -38,9 +48,13 @@ public class item_normal {
         return memo;
     }
 
+    public int getType() { return this.type; }
+
     public void setSiteName(String sitename){
         this.siteName = sitename;
     }
+
+    public void setUrl(String url){ this.url = url; }
 
     public void setIDNumber(String idNumber){
         this.IDNumber = idNumber;
@@ -65,4 +79,6 @@ public class item_normal {
     public void setMemo(String memo){
         this.memo = memo;
     }
+
+    public void setType(int type) { this.type = type; }
 }

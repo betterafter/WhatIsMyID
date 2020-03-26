@@ -14,10 +14,12 @@
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
+        android:id="@+id/test"
         android:layout_width="204dp"
         android:layout_height="70dp"
         android:layout_weight="1"
         android:gravity="center_vertical"
+        android:onClick="onShowListClick"
         android:orientation="vertical">
 
         <TextView

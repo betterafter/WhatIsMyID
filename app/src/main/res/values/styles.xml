@@ -11,5 +11,11 @@
 
     <style name="EdittextThema" parent="Widget.AppCompat.EditText"></style>
     <style name="PopupTheme" parent="Theme.AppCompat.DayNight.Dialog"></style>
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:editTextColor">#ffffff</item>
+        <item name="android:textColorHint">#ffffff</item>
+    </style>
+
 
 </resources>

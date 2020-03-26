@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.Save_widAccountActivity"/>
+        <activity android:name=".Activity.Show_widAccountDetailActivity"/>
         <activity android:name=".Activity.NameSuggestPopupActivity"
             android:theme="@style/PopupTheme" android:screenOrientation="portrait"/>
         <meta-data

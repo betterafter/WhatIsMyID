@@ -8,6 +8,8 @@ import android.widget.TextView;
 import com.example.whatismyid.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import listDataForm.item_normal;
 
@@ -19,6 +21,13 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public int getItemCount(){
 
         return item_normals.size();
+    }
+
+
+    @Override
+    public int getItemViewType(int position) {
+
+        return item_normals.get(position).getType();
     }
 
 
@@ -52,6 +61,13 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Logoview = itemView.findViewById(R.id.logoview);
 
 
+            // ShowNameSavedAccountAdapter
+            IDview = itemView.findViewById(R.id.detailid);
+            passwordview = itemView.findViewById(R.id.detailpassword);
+            Emailview = itemView.findViewById(R.id.detailemail);
+            memoview = itemView.findViewById(R.id.detailmemo);
+
+
             // NameSuggestAdapter
             Titleview2 = itemView.findViewById(R.id.namesuggestview);
 
@@ -69,11 +85,48 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
             Titleview2.setText(item_normal.getSiteName());
         }
+
+
+        void DetailBind(item_normal item_normal){
+
+            IDview.setText(item_normal.getID());
+            passwordview.setText(item_normal.getPassword());
+            Emailview.setText(item_normal.getEmail());
+            memoview.setText(item_normal.getMemo());
+        }
     }
 
 
 
     public void AddItem(item_normal item){
+
         item_normals.add(item);
+        //Collections.sort(item_normals, new AscendingSortString());
+    }
+
+
+    public void ClearAllItem(){
+
+        int size = item_normals.size();
+        item_normals.clear();
+        notifyItemRangeRemoved(0, size);
+    }
+
+
+    public void SortAllItem(){
+
+        if(item_normals.size() > 0)
+            Collections.sort(item_normals, new AscendingSortString());
+    }
+
+
+
+    class AscendingSortString implements Comparator<item_normal>{
+
+        @Override
+        public int compare(item_normal a, item_normal b){
+
+            return a.getSiteName().compareTo(b.getSiteName());
+        }
     }
 }

@@ -8,20 +8,20 @@
     tools:context=".Activity.Show_widAccountActivity">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/newAccount"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="472dp"
         android:onClick="onSaveAccountClick"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_account"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/show_account"
         android:layout_width="395dp"
-        android:layout_height="335dp"
+        android:layout_height="646dp"
         android:layout_marginTop="8dp"
         android:overScrollMode="always"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,6 +37,7 @@
         android:layout_width="395dp"
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
+        app:theme="@style/SearchViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

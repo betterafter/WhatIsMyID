@@ -8,11 +8,12 @@ import android.support.v7.widget.AppCompatEditText;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import com.example.whatismyid.R;
-import com.example.whatismyid.wid_Database;
+import com.example.whatismyid.wid_MainActivity;
 
-public class Save_widAccountActivity extends wid_Database {
+public class Save_widAccountActivity extends wid_MainActivity {
 
     // 각 EditText에 자신의 계정 정보를 입력
     // save 버튼을 누르면 EditText에 적은 text를 가져와 sql 저장
@@ -21,6 +22,8 @@ public class Save_widAccountActivity extends wid_Database {
 
     // 순서대로 사이트 이름 - 사이트 주소 - 아이디 - 비밀번호 - 이메일 - 추가 메모
     public AppCompatEditText SiteNameText, SiteURLText, LogInText, PasswordText, EmailText, MemoText;
+    //private widSQLdataContract widData;
+    wid_databaseHelper databaseHelper;
 
 
 
@@ -32,7 +35,11 @@ public class Save_widAccountActivity extends wid_Database {
         setContentView(R.layout.save_account);
         init();
         CurrentActionBar();
+
+        databaseHelper = new wid_databaseHelper(getApplicationContext(), "wid", null, 1);
     }
+
+
 
 
     private void CurrentActionBar(){
@@ -62,7 +69,10 @@ public class Save_widAccountActivity extends wid_Database {
     public boolean onTouchEvent (MotionEvent motionEvent){
 
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+
+        if(imm.isAcceptingText()){
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
 
         return true;
     }
@@ -96,6 +106,11 @@ public class Save_widAccountActivity extends wid_Database {
 
     public void SaveToDatabase(String[] strings){
 
+        databaseHelper.insert(strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]);
+        //databaseHelper.update();
+        //MemoText.setText(databaseHelper.getResult());
+        Toast toast = Toast.makeText(this, "저장되었습니다.", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
 
@@ -104,9 +119,7 @@ public class Save_widAccountActivity extends wid_Database {
     }
 
 
-    public void ShowListData(){
-
-    }
+    public void ShowListData(){}
 
 
     public void ShowListNameData(){
@@ -119,6 +132,11 @@ public class Save_widAccountActivity extends wid_Database {
         if(resultCode == 0){
             SiteNameText.setText(data.getExtras().getString("sitename"));
         }
+    }
+
+
+    public void onSaveButtonClick(View view){
+        SaveToDatabase(GetAccountInformation());
     }
 
 
