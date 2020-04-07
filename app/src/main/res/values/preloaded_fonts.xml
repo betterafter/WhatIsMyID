@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amiko</item>
+        <item>@font/baloo</item>
         <item>@font/copse</item>
         <item>@font/delius</item>
         <item>@font/exo_light</item>

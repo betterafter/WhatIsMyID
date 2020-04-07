@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/show_detail"
-        android:layout_width="395dp"
-        android:layout_height="596dp"
+        android:layout_width="350dp"
+        android:layout_height="583dp"
         android:layout_marginTop="94dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,15 +6,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.example.whatismyid.R;
 import com.example.whatismyid.listAdapter.NameSuggestAdapter;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.ArrayList;
 
 import listDataForm.item_normal;
 
@@ -27,11 +26,16 @@ public class NameSuggestPopupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_AppCompat_Dialog);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.save_account_popup);
 
         recyclerviewInit();
         ShowListNameData();
     }
+
+
+
 
     // 이름 추천 리스트 설정
     public void recyclerviewInit(){
@@ -55,36 +59,31 @@ public class NameSuggestPopupActivity extends AppCompatActivity {
         finish();
     }
 
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        //바깥레이어 클릭시 안닫히게
-        if(event.getAction()==MotionEvent.ACTION_OUTSIDE){
-            return false;
-        }
-        return true;
-    }
-
     // 이름 설정 리스트에 들어갈 데이터들. Show_widAccountActivity 에서 오버라이딩한 것 처럼 만들면 된다.
     // 대상 adapter는 현재 클래스에 있는 recyclerVeiw 의 adapter인 showNameSavedAccountAdapter
 
     public void ShowListNameData(){
-        // e.g.
-        // 데이터를 저장할 리스트들 (사이트 이름, 사이트 별로 저장된 아이디 개수 저장)
-        List<String> SampleTitle = Arrays.asList("구글", "네이버", "다음", "아무거나", "적어보세요", "하하하", "스크롤테스트", "하하하", "하하하");
+//
+        Intent intent = getIntent();
+        ArrayList<ArrayList<String>> li = (ArrayList<ArrayList<String>>) intent.getSerializableExtra("database");
+        ArrayList<String> isShown = new ArrayList<>();
 
-        // 저장한 데이터를 item_normal 형식으로 바꿔서 adapter에 연결
-        // 리사이클러뷰 (리스트뷰)의 한 칸이 한개의 item_normal이 됨.
-        // 여러개의 item_normal을 리스트로 출력해서 보여주는 것이라고 생각하면 됨.
-        for(int i = 0; i < SampleTitle.size(); i++){
+        for(int i = 0; i < li.size(); i++){
 
-            item_normal item_normals = new item_normal(3);
-            item_normals.setSiteName(SampleTitle.get(i));
+            if(!isShown.contains(li.get(i).get(1))){
+                item_normal normal = new item_normal(3);
+                normal.setSiteName(li.get(i).get(1));
 
-            nameSuggestAdapter.AddItem(item_normals);
+                isShown.add(li.get(i).get(1));
+                nameSuggestAdapter.AddItem(normal);
+            }
         }
+
+        nameSuggestAdapter.SortAllItem();
         nameSuggestAdapter.notifyDataSetChanged();
     }
+
+
 
 
 

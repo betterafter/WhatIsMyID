@@ -2,7 +2,6 @@ package com.example.whatismyid.listAdapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.whatismyid.R;
@@ -31,16 +30,13 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
 
+
     class ViewHolder extends RecyclerView.ViewHolder{
 
         // ShowAccountAdapter
         public TextView Titleview;
-        public TextView idCountview;
-        public ImageView Logoview;
-        public TextView urlview1;
 
         // SHowNameSavedAccountAdapter
-        public TextView Titleview1;
         public TextView IDview;
         public TextView passwordview;
         public TextView Emailview;
@@ -49,7 +45,6 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         // NameSuggestAdapter
         public TextView Titleview2;
-        public ImageView Logoview2;
 
 
         ViewHolder(View itemView) {
@@ -57,8 +52,7 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
             // ShowAccountAdapter
             Titleview = itemView.findViewById(R.id.titleview);
-            idCountview = itemView.findViewById(R.id.idnumberview);
-            Logoview = itemView.findViewById(R.id.logoview);
+
 
 
             // ShowNameSavedAccountAdapter
@@ -66,6 +60,7 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             passwordview = itemView.findViewById(R.id.detailpassword);
             Emailview = itemView.findViewById(R.id.detailemail);
             memoview = itemView.findViewById(R.id.detailmemo);
+            urlview2 = itemView.findViewById(R.id.detailurl);
 
 
             // NameSuggestAdapter
@@ -76,8 +71,6 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         void Bind(item_normal item_normal){
             Titleview.setText(item_normal.getSiteName());
-            idCountview.setText("저장한 ID : " + item_normal.getIDNumber());
-            Logoview.setImageResource(item_normal.getLogo());
         }
 
 
@@ -93,6 +86,7 @@ public abstract class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             passwordview.setText(item_normal.getPassword());
             Emailview.setText(item_normal.getEmail());
             memoview.setText(item_normal.getMemo());
+            urlview2.setText(item_normal.getUrl());
         }
     }
 

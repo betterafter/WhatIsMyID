@@ -2,6 +2,9 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">@color/cursorColor</color>
-    <color name="cursorColor">#5384FF</color>
+    <color name="colorAccent">#81BEF7</color>
+    <color name="cursorColor">#81BEF7</color>
+    <color name="backgroundColor">#81BEF7</color>
+    <color name="weakblue">#81BEF7</color>
+    <color name="strongblue">#0080FF</color>
 </resources>

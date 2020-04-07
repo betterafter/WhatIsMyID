@@ -4,33 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C1C1C"
+    android:background="@color/weakblue"
     tools:context=".Activity.Show_widAccountActivity">
 
     <ImageButton
         android:id="@+id/newAccount"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="472dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="488dp"
+        android:background="@android:color/transparent"
         android:onClick="onSaveAccountClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@drawable/plus_icon" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/show_account"
         android:layout_width="395dp"
-        android:layout_height="646dp"
+        android:layout_height="529dp"
         android:layout_marginTop="8dp"
         android:overScrollMode="always"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
-        app:layout_constraintVertical_bias="0.029">
-
-    </android.support.v7.widget.RecyclerView>
+        app:layout_constraintVertical_bias="0.125"></android.support.v7.widget.RecyclerView>
 
     <SearchView
         android:id="@+id/searchView"
@@ -41,7 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </SearchView>
 
 

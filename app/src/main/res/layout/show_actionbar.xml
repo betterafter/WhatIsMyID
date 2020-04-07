@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="40dp"
-    android:background="#1C1C1C">
+    android:background="@color/weakblue">
 
     <TextView
         android:id="@+id/textView7"
@@ -14,8 +14,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="13dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/mapopeacefull"
         android:text="저장된 목록"
-        android:textColor="@color/colorAccent"
+        android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold" />
 </RelativeLayout>

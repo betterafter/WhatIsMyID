@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="2dp"
+    android:background="@color/weakblue"
     android:gravity="center_vertical"
-    android:layout_marginBottom="8dp"
-    android:background="#dfd00f">
+    android:orientation="horizontal"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/namesuggestview"
@@ -13,12 +16,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/exo_light"
         android:includeFontPadding="false"
+        android:onClick="onListItemClick"
         android:paddingLeft="30dp"
         android:text="naver"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:onClick="onListItemClick"/>
+        android:textStyle="bold" />
 
 
 </LinearLayout>

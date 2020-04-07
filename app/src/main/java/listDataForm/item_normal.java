@@ -1,6 +1,8 @@
 package listDataForm;
 
-public class item_normal {
+import java.io.Serializable;
+
+public class item_normal implements Serializable {
 
     private String siteName;
     private String url;
@@ -13,9 +15,11 @@ public class item_normal {
     private int type;
 
 
+
     public item_normal(int viewType){
         this.type = viewType;
     }
+
 
 
     public String getSiteName(){

@@ -5,13 +5,7 @@
     android:padding="8dp"
     android:gravity="center_vertical"
     android:layout_marginBottom="8dp"
-    android:background="@android:color/white">
-
-    <ImageView
-        android:id="@+id/logoview"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@mipmap/ic_launcher" />
+    android:background="@drawable/list_style">
 
     <LinearLayout
         android:id="@+id/test"
@@ -24,9 +18,10 @@
 
         <TextView
             android:id="@+id/titleview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/mapopeacefull"
+            android:gravity="center_vertical"
             android:includeFontPadding="false"
             android:paddingLeft="30dp"
             android:text="naver"
@@ -34,16 +29,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/idnumberview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumbold"
-            android:includeFontPadding="false"
-            android:paddingLeft="30dp"
-            android:text="저장한 ID : "
-            android:textColor="@android:color/darker_gray"
-            android:textSize="13sp" />
     </LinearLayout>
 
 </LinearLayout>

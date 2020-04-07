@@ -3,10 +3,11 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#1C1C1C</item>
-        <item name="colorPrimaryDark">#1C1C1C</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/backgroundColor</item>
+        <item name="colorPrimaryDark">@color/backgroundColor</item>
+        <item name="colorAccent">@color/strongblue</item>
         <item name="colorControlNormal">#ffffff</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="EdittextThema" parent="Widget.AppCompat.EditText"></style>
@@ -15,6 +16,9 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:editTextColor">#ffffff</item>
         <item name="android:textColorHint">#ffffff</item>
+    </style>
+    <style name="RadiusRoundTextView">
+        <item name="android:background">@drawable/round_shape</item>
     </style>
 
 

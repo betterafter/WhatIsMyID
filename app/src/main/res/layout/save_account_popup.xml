@@ -2,63 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
     android:layout_height="350dp"
-    android:background="#1C1C1C"
+    android:background="#ffffff"
     android:orientation="vertical">
 
     <!-- 타이틀바 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="#5384FF"
-            android:gravity="center"
-            android:text="이름 선택"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-    </LinearLayout>
     <!-- //end 타이틀바 -->
 
     <!-- 내용 -->
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/suggestview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_height="308dp"
+        android:overScrollMode="always" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/suggestview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:overScrollMode="always" />
-    </LinearLayout>
     <!-- Notice -->
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#66bdbdbd" />
-
     <!-- 닫기 버튼 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:background="#00000000"
-            android:gravity="center"
-            android:onClick="onClickForPopUpDeactivate"
-            android:padding="16dp"
-            android:text="확인"
-            android:textColor="#5384FF"
-            android:textSize="15sp" />
-    </LinearLayout>
     <!--// 닫기 버튼 -->
 </LinearLayout>

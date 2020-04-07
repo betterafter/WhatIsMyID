@@ -5,9 +5,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class wid_databaseHelper extends SQLiteOpenHelper {
+public class wid_databaseHelper extends SQLiteOpenHelper implements Serializable {
 
     // DBHelper 생성자로 관리할 DB 이름과 버전 정보를 받음
     public wid_databaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -24,11 +25,15 @@ public class wid_databaseHelper extends SQLiteOpenHelper {
                 "siteurl TEXT, id TEXT, password TEXT, email TEXT, memo TEXT);");
     }
 
+
+
     // DB 업그레이드를 위해 버전이 변경될 때 호출되는 함수
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+
 
     public void insert(String sitename, String siteurl, String id, String password, String email, String memo) {
         // 읽고 쓰기가 가능하게 DB 열기
@@ -38,41 +43,23 @@ public class wid_databaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void update() {
+    public void update(String sitename, String siteurl, String id, String password, String email, String memo) {
+
         SQLiteDatabase db = getWritableDatabase();
-        db.rawQuery("SELECT * FROM wid ORDER BY sitename ASC", null);
+        db.execSQL("Update wid Set siteurl ='" + siteurl + "', password = '" + password +"'" +
+                ", email = '"+email+"', memo='"+memo+"' where sitename = '"+sitename+"' AND id='"+id+"'");
         db.close();
     }
 
-    public void delete(String id) {
+    public void delete(String sitename, String id) {
         SQLiteDatabase db = getWritableDatabase();
         // 입력한 항목과 일치하는 행 삭제
-        db.execSQL("DELETE FROM wid WHERE id='" + id + "';");
+        db.execSQL("DELETE FROM wid WHERE id='" + id + "' AND sitename ='" + sitename + "';");
         db.close();
     }
 
 
-    public String[] getResultToStringArray(int idx){
-        SQLiteDatabase db = getReadableDatabase();
-        String result[] = new String[7];
-        //boolean isResultExist = false;
 
-        // DB에 있는 데이터를 쉽게 처리하기 위해 Cursor를 사용하여 테이블에 있는 모든 데이터 출력
-        Cursor cursor = db.rawQuery("SELECT * FROM wid ORDER BY sitename DESC", null);
-
-        while(cursor.moveToNext()){
-            if(cursor.getString(0) == Integer.toString(idx)){
-                //isResultExist = true;
-                for(int i = 0; i < 7; i++){
-                    result[i] = cursor.getString(i);
-                }
-
-                break;
-            }
-        }
-
-        return result;
-    }
 
 
 

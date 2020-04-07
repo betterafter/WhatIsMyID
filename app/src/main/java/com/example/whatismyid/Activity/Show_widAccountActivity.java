@@ -1,10 +1,13 @@
 package com.example.whatismyid.Activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -34,7 +37,10 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
         SearchViewClick();
 
         // 계정 생성 버튼 맨 위로 올리기
+        String buttonColor = "#0080FF";
+
         ImageButton newAccountbutton = findViewById(R.id.newAccount);
+        newAccountbutton.setColorFilter(Color.parseColor(buttonColor), PorterDuff.Mode.SRC_IN);
         newAccountbutton.bringToFront();
     }
 
@@ -138,8 +144,6 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
                 item_normal normal = new item_normal(3);
                 normal.setSiteName(list.get(i).get(1));
 
-                System.out.println(normal.getSiteName());
-
                 isShown.add(list.get(i).get(1));
                 adapter.AddItem(normal);
             }
@@ -153,7 +157,30 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
 
     // 새로운 계정 저장하기 버튼 클릭
     public void onSaveAccountClick(View view){
+
+        final ImageButton button = (ImageButton)view;
+        button.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+
+                String buttonColor = "#0080FF";
+
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN : {
+                        button.setColorFilter(Color.parseColor("#81BEF7"), PorterDuff.Mode.SRC_IN);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP   : {
+                        button.setColorFilter(Color.parseColor(buttonColor), PorterDuff.Mode.SRC_IN);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+
         Intent intent = new Intent(Show_widAccountActivity.this, Save_widAccountActivity.class);
+        intent.putExtra("StartActivityType", "new");
         startActivity(intent);
     }
 
@@ -183,7 +210,6 @@ public class Show_widAccountActivity extends Save_widAccountActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
 
-                //ShowSearchedListData(query);
                 return true;
             }
 

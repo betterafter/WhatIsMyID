@@ -1,73 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
     android:layout_marginBottom="8dp"
-    android:background="@android:color/white"
-    android:gravity="center_horizontal"
+    android:background="@drawable/list_style"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:padding="10dp">
 
     <LinearLayout
-        android:layout_width="307dp"
-        android:layout_height="181dp"
+        android:layout_width="wrap_content"
+        android:layout_height="283dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/아이디"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/mapopeacefull"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="계정"
+            android:textAlignment="center"
+            android:textColor="@color/strongblue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/아이디2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/mapopeacefull"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="암호"
+            android:textAlignment="center"
+            android:textColor="@color/strongblue" />
+
+        <TextView
+            android:id="@+id/url"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/mapopeacefull"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="주소"
+            android:textAlignment="center"
+            android:textColor="@color/strongblue" />
+
+        <TextView
+            android:id="@+id/아이디3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/mapopeacefull"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="이메일"
+            android:textAlignment="center"
+            android:textColor="@color/strongblue"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/아이디4"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/mapopeacefull"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="메모"
+            android:textAlignment="center"
+            android:textColor="@color/strongblue" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/detailid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_light"
-            android:gravity="center_vertical"
+            android:fontFamily="@font/mapopeacefull"
             android:includeFontPadding="false"
             android:onClick="onListItemClick"
+            android:padding="15dp"
             android:paddingLeft="30dp"
             android:text="naver"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/detailpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="viewStart" />
+            android:fontFamily="@font/mapopeacefull"
+            android:padding="15dp"
+            android:text="whysoserious"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/detailurl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mapopeacefull"
+            android:padding="15dp"
+            android:text="whysoserious"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/detailemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mapopeacefull"
+            android:padding="15dp"
             android:text="TextView"
-            android:textAlignment="viewStart" />
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/detailmemo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="viewStart" />
+            android:fontFamily="@font/mapopeacefull"
+            android:padding="15dp"
+            android:text="sfsdfsfdsfsdfsjfksddkdkdjsfksdfjskfsjfksfjskfsjfksdfjsfksfjssdfjsdkfjsfksfjdskfjskfdsjfksdfjdskfjdskfsjfksfjdskf"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/imageButton5"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_edit" />
+            android:gravity="right"
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_delete" />
+            <ImageButton
+                android:id="@+id/detailedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="onEditClick"
+                android:padding="10dp"
+                android:src="@drawable/edit_icon" />
+
+            <ImageButton
+                android:id="@+id/detaildelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:src="@drawable/trash_icon"
+                android:onClick="onDeleteClick"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

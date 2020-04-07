@@ -5,11 +5,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Blaccount"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.Show_widAccountActivity">
+        <activity android:name=".Activity.Show_widAccountActivity"
+            android:windowSoftInputMode="adjustNothing">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +21,9 @@
         <activity android:name=".Activity.Save_widAccountActivity"/>
         <activity android:name=".Activity.Show_widAccountDetailActivity"/>
         <activity android:name=".Activity.NameSuggestPopupActivity"
-            android:theme="@style/PopupTheme" android:screenOrientation="portrait"/>
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
